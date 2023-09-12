@@ -11,7 +11,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY', 'default_secret_key')
 DEBUG = os.environ.get('DEBUG') == 'True'
 
-ALLOWED_HOSTS = ['https://quickfire-bulletin-fe14356feaac.herokuapp.com/','127.0.0.1']
+ALLOWED_HOSTS = ['quickfire-bulletin.herokuapp.com/','127.0.0.1']
 
 
 
