@@ -1,7 +1,10 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+from django.views import generic
+from .models import Post
 
-def home(request):
-    return HttpResponse("This is in the qfb_main")
 
-def test_page(request):
-    return HttpResponse("This is in the qfb_main")
+class PostList(generic.ListView):
+    model = Post
+    queryset = Post.objects.filter(status=1).order_by("-created_on")
+    template_name = "index.html"
+    paginate_by = 6
