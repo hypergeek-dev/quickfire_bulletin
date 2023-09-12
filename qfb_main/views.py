@@ -4,6 +4,6 @@ from qfb_main import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('qfbmain/', views.home, name='qfbmain'),  
+ 
     path('', views.home, name='home'),  
 ]
