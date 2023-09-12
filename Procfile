@@ -1,1 +1,1 @@
-web: gunicorn quickfire_bulletin.wsgi
+web: gunicorn quickfire-bulletin.wsgi
