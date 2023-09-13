@@ -1,4 +1,9 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+from django.views import generic
+from qfb_main.models import Post
 
-def home(request):
-    return HttpResponse("This is the quickfire_bulletin.")
+class PostList(generic.ListView):
+    model = Post
+    queryset = Post.objects.filter(status=1).order_by("-created_on")
+    template_name = "index.html"
+    paginate_by = 6
