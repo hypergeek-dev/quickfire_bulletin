@@ -1,8 +1,9 @@
-from django.contrib import admin  # Import the admin module
-from django.urls import path
+from django.contrib import admin
+from django.urls import path, include  
 from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),  # Add this line for the admin interface
+    path('admin/', admin.site.urls),
+    path('summernote/', include('django_summernote.urls')),  
     path("", views.PostList.as_view(), name="home"),
 ]
