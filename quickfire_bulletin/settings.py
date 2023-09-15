@@ -61,6 +61,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'quickfire_bulletin.wsgi.application'
 
+# quickfire_bulletin/settings.py
+NEWS_API_KEY = 'API_KEY'
 
 DATABASES = {
      'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
