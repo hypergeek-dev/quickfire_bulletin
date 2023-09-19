@@ -12,8 +12,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'default_secret_key')
 DEBUG = os.environ.get('DEBUG') == 'True'
 
 ALLOWED_HOSTS = ['quickfire-bulletin-1054d3494a4d.herokuapp.com','127.0.0.1']
-
-
+NEWS_API_KEY = 'YOUR_API_KEY'
 
 # Application definition
 
